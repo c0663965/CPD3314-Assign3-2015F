@@ -1,4 +1,4 @@
-package assign3.pkg01.pkg2014f;
+package cpd3314assign3;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -11,13 +11,13 @@ import static org.junit.Assert.*;
 /**
  * @author Len Payne
  */
-public class Assign3012014FTest {
+public class CPD3314Assign3Test {
 
     // Streams used to hijack System.out and System.err
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
 
-    public Assign3012014FTest() {
+    public CPD3314Assign3Test() {
     }
 
     @Before
@@ -36,7 +36,7 @@ public class Assign3012014FTest {
     }
 
     /**
-     * Test of doExercise1 method, of class Assign3012014F.
+     * Test of doExercise1 method, of class CPD3314Assign3.
      */
     @Test
     public void testDoExercise1High() {
@@ -47,7 +47,7 @@ public class Assign3012014FTest {
         String expected = "That's too high!";
         String[] unexpected = {"That's too low!", "Lucky number seven!", "Thank you!"};
         
-        Assign3012014F.doExercise1();
+        CPD3314Assign3.doExercise1();
         
         String actual = outContent.toString();
         assertTrue("Checking if \"" + actual + "\" contains: \"" + expected + "\"",
@@ -59,7 +59,7 @@ public class Assign3012014FTest {
     }
 
     /**
-     * Test of doExercise1 method, of class Assign3012014F.
+     * Test of doExercise1 method, of class CPD3314Assign3.
      */
     @Test
     public void testDoExercise1Low() {
@@ -69,7 +69,7 @@ public class Assign3012014FTest {
         
         String expected = "That's too low!";
         String[] unexpected = {"That's too high!", "Lucky number seven!", "Thank you!"};
-        Assign3012014F.doExercise1();
+        CPD3314Assign3.doExercise1();
         String actual = outContent.toString();
         assertTrue("Checking if \"" + actual + "\" contains: \"" + expected + "\"",
                 actual.contains(expected));
@@ -80,7 +80,7 @@ public class Assign3012014FTest {
     }
 
     /**
-     * Test of doExercise1 method, of class Assign3012014F.
+     * Test of doExercise1 method, of class CPD3314Assign3.
      */
     @Test
     public void testDoExercise1Lucky() {
@@ -90,7 +90,7 @@ public class Assign3012014FTest {
         
         String expected = "Lucky number seven!";
         String[] unexpected = {"That's too high!", "That's too low!", "Thank you!"};
-        Assign3012014F.doExercise1();
+        CPD3314Assign3.doExercise1();
         String actual = outContent.toString();
         assertTrue("Checking if \"" + actual + "\" contains: \"" + expected + "\"",
                 actual.contains(expected));
@@ -101,7 +101,7 @@ public class Assign3012014FTest {
     }
 
     /**
-     * Test of doExercise1 method, of class Assign3012014F.
+     * Test of doExercise1 method, of class CPD3314Assign3.
      */
     @Test
     public void testDoExercise1Other() {
@@ -111,7 +111,7 @@ public class Assign3012014FTest {
         
         String expected = "Thank you!";
         String[] unexpected = {"That's too high!", "That's too low!", "Lucky number seven!"};
-        Assign3012014F.doExercise1();
+        CPD3314Assign3.doExercise1();
         String actual = outContent.toString();
         assertTrue("Checking if \"" + actual + "\" contains: \"" + expected + "\"",
                 actual.contains(expected));
@@ -122,7 +122,7 @@ public class Assign3012014FTest {
     }
 
     /**
-     * Test of doExercise2 method, of class Assign3012014F.
+     * Test of doExercise2 method, of class CPD3314Assign3.
      */
     @Test
     public void testDoExercise2High() {
@@ -133,7 +133,7 @@ public class Assign3012014FTest {
         String expected = "Please pick a number between 1-26.";
         String[] unexpected = {"That's the right number/letter.", "Try again."};
         
-        Assign3012014F.doExercise2();
+        CPD3314Assign3.doExercise2();
         String actual = outContent.toString();
 
         assertTrue("Checking if \"" + actual + "\" contains: \"" + expected + "\"",
@@ -145,7 +145,7 @@ public class Assign3012014FTest {
     }
     
     /**
-     * Test of doExercise2 method, of class Assign3012014F.
+     * Test of doExercise2 method, of class CPD3314Assign3.
      */
     @Test
     public void testDoExercise2Low() {
@@ -156,7 +156,7 @@ public class Assign3012014FTest {
         String expected = "Please pick a number between 1-26.";
         String[] unexpected = {"That's the right number/letter.", "Try again."};
         
-        Assign3012014F.doExercise2();
+        CPD3314Assign3.doExercise2();
         String actual = outContent.toString();
 
         assertTrue("Checking if \"" + actual + "\" contains: \"" + expected + "\"",
@@ -168,7 +168,7 @@ public class Assign3012014FTest {
     }
     
     /**
-     * Test of doExercise2 method, of class Assign3012014F.
+     * Test of doExercise2 method, of class CPD3314Assign3.
      */
     @Test
     public void testDoExercise2Upper() {
@@ -179,7 +179,7 @@ public class Assign3012014FTest {
         String expected = "That's the right number/letter.";
         String[] unexpected = {"Please pick a number between 1-26.", "Try again."};
         
-        Assign3012014F.doExercise2();
+        CPD3314Assign3.doExercise2();
         String actual = outContent.toString();
 
         assertTrue("Checking if \"" + actual + "\" contains: \"" + expected + "\"",
@@ -191,7 +191,7 @@ public class Assign3012014FTest {
     }
     
     /**
-     * Test of doExercise2 method, of class Assign3012014F.
+     * Test of doExercise2 method, of class CPD3314Assign3.
      */
     @Test
     public void testDoExercise2Lower() {
@@ -202,7 +202,7 @@ public class Assign3012014FTest {
         String expected = "That's the right number/letter.";
         String[] unexpected = {"Please pick a number between 1-26.", "Try again."};
         
-        Assign3012014F.doExercise2();
+        CPD3314Assign3.doExercise2();
         String actual = outContent.toString();
 
         assertTrue("Checking if \"" + actual + "\" contains: \"" + expected + "\"",
@@ -214,7 +214,7 @@ public class Assign3012014FTest {
     }
     
     /**
-     * Test of doExercise2 method, of class Assign3012014F.
+     * Test of doExercise2 method, of class CPD3314Assign3.
      */
     @Test
     public void testDoExercise2Wrong() {
@@ -225,7 +225,7 @@ public class Assign3012014FTest {
         String expected = "Try again.";
         String[] unexpected = {"Please pick a number between 1-26.", "That's the right number/letter."};
         
-        Assign3012014F.doExercise2();
+        CPD3314Assign3.doExercise2();
         String actual = outContent.toString();
 
         assertTrue("Checking if \"" + actual + "\" contains: \"" + expected + "\"",
@@ -237,7 +237,7 @@ public class Assign3012014FTest {
     }
 
     /**
-     * Test of doExercise3 method, of class Assign3012014F.
+     * Test of doExercise3 method, of class CPD3314Assign3.
      */
     @Test
     public void testDoExercise3() {
@@ -247,7 +247,7 @@ public class Assign3012014FTest {
         
         String[] expected = {"$16.05", "$139.50"};
         
-        Assign3012014F.doExercise3();
+        CPD3314Assign3.doExercise3();
 
         String actual = outContent.toString();
 
