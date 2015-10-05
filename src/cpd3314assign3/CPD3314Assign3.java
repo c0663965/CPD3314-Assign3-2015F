@@ -5,7 +5,9 @@ import java.util.Scanner;
 /**
  * @author Len Payne <len.payne@lambtoncollege.ca>
  */
+
 public class CPD3314Assign3 {
+    private static Object CPD3314Assign3Test;
 
     /**
      * @param args the command line arguments
@@ -40,6 +42,7 @@ public class CPD3314Assign3 {
                     break;
             }
         } while (choice != 0);
+     
     }
 
     /* Exercise #1 - I/O Decisions
@@ -72,9 +75,26 @@ public class CPD3314Assign3 {
      * Lucky number seven!
      *     
      */
+	 
     public static void doExercise1() {
-        // TODO: Do Exercise #1 Here
+      
+        Scanner input = new Scanner(System.in);
+        String string; 
         
+        System.out.print("\nInput a number 1-10 : ");
+        
+        int number=input.nextInt();
+        
+        if (number==7)
+            string = "You got a Lucky number seven!"; 
+        else if(number>10)
+            string = "The number is too high!";
+        else if (number<1)
+            string= "The number is too low";
+        else 
+            string="Thank you!!!";
+        
+        System.out.println('\n'+string+'\n');
     }
 
     /* Exercise #2 - Nested Logic
@@ -112,8 +132,31 @@ public class CPD3314Assign3 {
      * Please pick a number between 1-26.
      * 
      */
+	 
     public static void doExercise2() {
-        // TODO: Do Exercise #2 Here
+   
+        Scanner input = new Scanner(System.in);
+       
+        int lowerNum, upperNum;
+        
+        System.out.print("\nInput your letter : ");
+        char letter=input.next().charAt(0); //taking the first letter from an input string.  
+        
+        System.out.print("\nInput a number 1-26 : ");
+        int number=input.nextInt();
+          
+        if (1<=number && number<=26)
+        {
+            lowerNum = number + 'a' - 1;
+            upperNum = number + 'A' - 1;
+            
+            if (lowerNum==letter || upperNum==letter)
+                System.out.println("\nCongratulations! Your number and letter match. \n");
+            else
+                System.out.println("\nThey don't match. Try again.\n");
+        }
+        else
+            System.out.println("\nPlease pick a number between 1-26.\n");
     }
 
     /* Exercise #3 - Output Formatting
@@ -131,9 +174,19 @@ public class CPD3314Assign3 {
      * 14
      * Taxes: $1.82 Total: $15.82
      */
+	 
     public static void doExercise3() {
-        // TODO: Do Exercise #3 Here
+       
+        Scanner input = new Scanner(System.in);
         
+        System.out.printf("\nInput a price : ");
+                
+        double price=input.nextDouble();
+        double tax = price*0.13;
+        double total = price + tax;
+        
+        System.out.printf("\nTax : $%1.2f,   Total: $%1.2f\n\n", tax, total);
+     
     }
 
 }
